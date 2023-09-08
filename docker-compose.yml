@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  oci-arm-host-capacity:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: oci-arm-host-capacity
+    container_name: oci-arm-host-capacity
+    volumes:
+      - ./config/.env:/app/.env
+      - ./config:/app/config
